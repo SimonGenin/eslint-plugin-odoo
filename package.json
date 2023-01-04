@@ -1,0 +1,8 @@
+{
+  "name": "eslint-plugin-owl",
+  "version": "1.0.0",
+  "description": "Eslint rules specific for owl",
+  "main": "index.js",
+  "author": "Odoo",
+  "license": "MIT"
+}

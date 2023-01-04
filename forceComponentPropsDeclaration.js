@@ -23,7 +23,7 @@ const forceComponentPropsDeclaration = (context) => {
             if (sibling.expression.left.property.name === "props") return;
         }
 
-        context.report(node, `The Component class '${node.id.name}' doesn't declare explicitely its props.`);
+        context.report(node, `The Component class '${node.id.name}' doesn't declare explicitly its props.`);
     }
   };
 };

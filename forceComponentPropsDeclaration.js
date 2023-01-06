@@ -15,7 +15,7 @@ const forceComponentPropsDeclaration = (context) => {
 
         // We check for the outer class static expression
         let parent = node.parent; // can't be insufficient, in case of export keyword by example
-        while (parent.type !== "Program") { 
+        while (!parent.body) { 
           parent = parent.parent;
         }
         const siblings = parent.body;

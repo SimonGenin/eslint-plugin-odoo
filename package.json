@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-owl",
+  "name": "@odoo/eslint-plugin-owl",
   "version": "1.0.0",
   "description": "Eslint rules specific for owl",
   "main": "src/index.js",

@@ -22,3 +22,8 @@ rules: {
 
 #### `force-component-props-declaration`
 Enforce the need to declare a props property to any class extending directly from `Component`.
+###### Options: 
+*ignoreGlobs* Allow to define path globs to be ignored by the rule
+```js
+"owl/force-component-props-declaration": [2, { ignoreGlobs: "**/tests/**" }]
+```

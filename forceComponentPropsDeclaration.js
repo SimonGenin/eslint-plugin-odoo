@@ -1,6 +1,19 @@
+const minimatch = require('minimatch');
+
 const forceComponentPropsDeclaration = (context) => {
   return {
     ClassDeclaration: (node) => {
+
+        // If there are globs to ignore, we do it first
+        if (context.options && context.options[0] && context.options[0].ignoreGlobs) {
+          const globs = context.options[0].ignoreGlobs;
+          const filepath = context.getFilename().replace(context.getCwd(), "");
+          for (const glob of globs) {
+            console.log(filepath, glob, minimatch(filepath, glob))
+            if (minimatch(filepath, glob)) return;
+          } 
+        }
+
         // Are we a direct child of the Component class ?
         if (!node.superClass) return;
         if (node.superClass.name !== "Component") return;

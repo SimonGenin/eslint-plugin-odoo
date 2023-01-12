@@ -4,5 +4,8 @@
   "description": "Eslint rules specific for owl",
   "main": "index.js",
   "author": "Odoo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "minimatch": "^5.1.2"
+  }
 }

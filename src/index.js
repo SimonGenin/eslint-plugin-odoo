@@ -1,4 +1,6 @@
-const { forceComponentPropsDeclaration } = require("./forceComponentPropsDeclaration");
+const {
+  forceComponentPropsDeclaration,
+} = require("./forceComponentPropsDeclaration");
 module.exports = {
   rules: {
     "force-component-props-declaration": {
@@ -6,10 +8,10 @@ module.exports = {
       meta: {
         type: "suggestion",
         docs: {
-            description: "enforce the declaration of component props",
+          description: "enforce the declaration of component props",
         },
-        schema: ["ignoreGlobs"] 
-      }
+        schema: ["ignoreGlobs"],
+      },
     },
   },
 };

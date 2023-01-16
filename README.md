@@ -7,16 +7,16 @@ npm install @odoo/eslint-plugin-owl
 ```
 Add the plugin to your list in your eslint config file.
 ```js
-plugins: ["@odoo/eslint-plugin-owl"]
+plugins: ["@odoo/owl"]
 ```
 Use the following available rules in your `rules` object.
-The rules are namespaced by `owl`.
+The rules are namespaced by `@odoo/owl`.
 Exemple:
 ```js
 // ...
-plugins: ["@odoo/eslint-plugin-owl"],
+plugins: ["@odoo/owl"],
 rules: {
-    "owl/force-component-props-declaration": 2, // 1 for warning, 2 for error
+    "@odoo/owl/force-component-props-declaration": 2, // 1 for warning, 2 for error
 },
 // ...
 ```
@@ -28,5 +28,5 @@ Enforce the need to declare a props property to any class extending directly fro
 ##### Options: 
 `ignoreGlobs` Allow to define path globs to be ignored by the rule
 ```js
-"owl/force-component-props-declaration": [2, { ignoreGlobs: "**/tests/**" }]
+"@odoo/owl/force-component-props-declaration": [2, { ignoreGlobs: "**/tests/**" }]
 ```

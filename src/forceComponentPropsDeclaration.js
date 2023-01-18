@@ -12,7 +12,6 @@ const forceComponentPropsDeclaration = (context) => {
         const globs = context.options[0].ignoreGlobs;
         const filepath = context.getFilename().replace(context.getCwd(), "");
         for (const glob of globs) {
-          console.log(filepath, glob, minimatch(filepath, glob));
           if (minimatch(filepath, glob)) return;
         }
       }
